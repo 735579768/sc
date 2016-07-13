@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css" />
+    <link href="./css/shCoreDefault.css" rel="stylesheet" type="text/css" />
+    <link href="./css/index.css" rel="stylesheet" type="text/css" />
+    <title>check_verify()</title>
+</head>
+
+<body>
+    <div class="container">
+    <div id="left-nav" class="left-nav"></div>
+    <div class="right-code">
+        <div class="param-block">
+            <h2>拖动框架</h2>
+
+            <div class="code-block">
+                <div class="code-title"> <a  name="dragframe.udcode">上下框架</a><span class="code-note">上下拖动框架示例代码</span></div>
+                <div class="code-descr">
+            <pre class="brush:html">
+<div class="td-frame" id="td-ud-frame2">
+    <div class="td-up">
+        框架上边内容
+    </div>
+    <div class="td-line">
+        <div class="drag-line-s1"></div>
+        <div class="drag-line-s2"></div>
+        <div class="drag-line-s3"></div>
+    </div>
+    <div class="td-down">
+        框架下边内容
+    </div>
+</div>
+<script type="text/javascript">
+    var obj = dragFrame.init({
+        type: 2,
+        mainFrame: '#td-frame',
+        frame1: '.td-left',
+        frame2: '.td-right',
+        frameL: '.td-line',
+        callback: function(event) {
+            dragFrame.resetSize();
+        }
+    });
+</script>
+			</pre>
+                </div>
+            </div>
+
+
+            <div class="code-block">
+                <div class="code-title"> <a  name="dragframe.lrcode">左右框架</a><span class="code-note">左右拖动框架示例代码</span></div>
+                <div class="code-descr">
+            <pre class="brush:html">
+        <div class="td-frame" id="td-frame">
+            <div class="td-left">
+				左边
+            </div>
+            <div class="td-line">
+                <div class="drag-line-s1"></div>
+                <div class="drag-line-s2"></div>
+                <div class="drag-line-s3"></div>
+            </div>
+            <div class="td-right">
+				右边
+            </div>
+        </div>
+<script type="text/javascript">
+    var obj = dragFrame.init({
+        type: 1,
+        mainFrame: '#td-frame',
+        frame1: '.td-left',
+        frame2: '.td-right',
+        frameL: '.td-line',
+        callback: function(event) {
+            dragFrame.resetSize();
+        }
+    });
+</script>
+			</pre>
+                </div>
+            </div>
+
+            <div class="code-block">
+                <div class="code-title"> <a  name="dragframe.hhcode">混合框架</a><span class="code-note">上下左右拖动框架示例代码</span></div>
+                <div class="code-descr">
+            <pre class="brush:html">
+        <div class="td-frame" id="td-frame">
+            <div class="td-left">
+                <div class="acecls">
+                    <div class="td-frame" id="td-ud-frame3">
+                        <div class="td-up">
+                            框架上边内容
+                        </div>
+                        <div class="td-line">
+                            <div class="drag-line-s1"></div>
+                            <div class="drag-line-s2"></div>
+                            <div class="drag-line-s3"></div>
+                        </div>
+                        <div class="td-down">
+                            框架下边内容
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="td-line">
+                <div class="drag-line-s1"></div>
+                <div class="drag-line-s2"></div>
+                <div class="drag-line-s3"></div>
+            </div>
+            <div class="td-right">
+                <div class="td-frame" id="td-ud-frame">
+                    <div class="td-up">
+                        框架上边内容
+                    </div>
+                    <div class="td-line">
+                        <div class="drag-line-s1"></div>
+                        <div class="drag-line-s2"></div>
+                        <div class="drag-line-s3"></div>
+                    </div>
+                    <div class="td-down">
+                        框架下边内容
+                    </div>
+                </div>
+            </div>
+        </div>
+			</pre>
+                </div>
+            </div>
+            <div class="code-block">
+                <div class="code-title"> <a  name="type">type</a><span class="code-note">拖动类型/方向</span></div>
+                <div class="code-param">类型：int 默认为 1</div>
+                <div class="code-descr">
+                   框架类型1左右  2上下
+                </div>
+            </div>
+            <div class="code-block">
+                <div class="code-title"> <a  name="mainFrame">mainFrame</a><span class="code-note">主框架的容器选择器</span></div>
+                <div class="code-param">类型：jquery选择器 默认为：#td-frame</div>
+                <div class="code-descr">
+
+                </div>
+            </div>
+            <div class="code-block">
+                <div class="code-title"> <a  name="bili">bili</a><span class="code-note">框架比例</span></div>
+                <div class="code-param">类型：Array 默认为：[1,1]</div>
+                <div class="code-descr">
+
+                </div>
+            </div>
+
+            <div class="code-block">
+                <div class="code-title"> <a  name="minSize">minSize</a><span class="code-note">框架最小宽/高度</span></div>
+                <div class="code-param">类型：int 默认为：50</div>
+                <div class="code-descr">
+
+                </div>
+            </div>
+
+            <div class="code-block">
+                <div class="code-title"> <a  name="frameL">frameL</a><span class="code-note">拖动线</span></div>
+                <div class="code-param">类型：jquery选择器 默认为：.td-line</div>
+                <div class="code-descr">
+
+                </div>
+            </div>
+            <div class="code-block">
+                <div class="code-title"> <a  name="frame1">frame1</a><span class="code-note">第一个框架</span></div>
+                <div class="code-param">类型：jquery选择器 默认为：.td-left</div>
+                <div class="code-descr">
+
+                </div>
+            </div>
+
+            <div class="code-block">
+                <div class="code-title"> <a  name="frame1Size">frame1Size</a><span class="code-note">第一个框架默认大小</span></div>
+                <div class="code-param">类型：int 默认为：0</div>
+                <div class="code-descr">
+
+                </div>
+            </div>
+
+
+            <div class="code-block">
+                <div class="code-title"> <a  name="frame2">frame2</a><span class="code-note">第二个框架</span></div>
+                <div class="code-param">类型：jquery选择器 默认为：.td-right</div>
+                <div class="code-descr">
+
+                </div>
+            </div>
+
+
+
+            <div class="code-block">
+                <div class="code-title"> <a  name="frame2Size">frame2Size</a><span class="code-note">第二个框架默认大小</span></div>
+                <div class="code-param">类型：int 默认为：0</div>
+                <div class="code-descr">
+
+                </div>
+            </div>
+
+
+            <div class="code-block">
+                <div class="code-title"> <a  name="callback">callback</a><span class="code-note">拖动回调</span></div>
+                <div class="code-param">类型：function 默认为：null</div>
+                <div class="code-descr">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+<script src="./js/shCore.js" type="text/javascript"></script>
+<script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="./js/init.js"></script>
+</body>
+
+</html>
