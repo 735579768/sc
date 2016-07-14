@@ -21,6 +21,21 @@ $(function() {
 		//显示页面
 		showMenu: function(obj) {
 			$(obj).parent().find('dd').toggle();
+		},
+		initEditor: function(id) {
+			var editor = ace.edit(id);
+			editor.setTheme("ace/theme/monokai");
+			editor.setOptions({
+				enableBasicAutocompletion: true,
+				enableSnippets: true,
+				PrintMargin: false,
+				enableLiveAutocompletion: true
+			});
+			//document.getElementById('editor').style.fontSize='14px';
+			editor.session.setMode("ace/mode/html");
+			editor.setShowPrintMargin(false);
+			//editor.setValue("<?php\n\n ?>");
+			editor.setReadOnly(true);
 		}
 	};
 	sc.initPage();

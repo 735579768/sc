@@ -18,31 +18,31 @@
                     <div class="code-title"> <a name="dragframe.udcode">上下框架</a><span class="code-note">上下拖动框架示例代码</span></div>
                     <div class="code-descr">
                         <pre class="brush:html">
-<div class="td-frame" id="td-ud-frame2">
-    <div class="td-up">
+&lt;div class=&quot;td-frame&quot; id=&quot;td-ud-frame2&quot;&gt;
+    &lt;div class=&quot;td-up&quot;&gt;
         框架上边内容
-    </div>
-    <div class="td-line">
-        <div class="drag-line-s1"></div>
-        <div class="drag-line-s2"></div>
-        <div class="drag-line-s3"></div>
-    </div>
-    <div class="td-down">
+    &lt;/div&gt;
+    &lt;div class=&quot;td-line&quot;&gt;
+        &lt;div class=&quot;drag-line-s1&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;drag-line-s2&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;drag-line-s3&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;td-down&quot;&gt;
         框架下边内容
-    </div>
-</div>
-<script type="text/javascript">
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
     var obj = dragFrame.init({
         type: 2,
-        mainFrame: '#td-frame',
-        frame1: '.td-left',
-        frame2: '.td-right',
-        frameL: '.td-line',
+        mainFrame: &#39;#td-frame&#39;,
+        frame1: &#39;.td-left&#39;,
+        frame2: &#39;.td-right&#39;,
+        frameL: &#39;.td-line&#39;,
         callback: function(event) {
             dragFrame.resetSize();
         }
     });
-</script>
+&lt;/script&gt;
 			</pre>
                     </div>
                 </div>
@@ -50,31 +50,31 @@
                     <div class="code-title"> <a name="dragframe.lrcode">左右框架</a><span class="code-note">左右拖动框架示例代码</span></div>
                     <div class="code-descr">
                         <pre class="brush:html">
-        <div class="td-frame" id="td-frame">
-            <div class="td-left">
-				左边
-            </div>
-            <div class="td-line">
-                <div class="drag-line-s1"></div>
-                <div class="drag-line-s2"></div>
-                <div class="drag-line-s3"></div>
-            </div>
-            <div class="td-right">
-				右边
-            </div>
-        </div>
-<script type="text/javascript">
+        &lt;div class=&quot;td-frame&quot; id=&quot;td-frame&quot;&gt;
+            &lt;div class=&quot;td-left&quot;&gt;
+                左边
+            &lt;/div&gt;
+            &lt;div class=&quot;td-line&quot;&gt;
+                &lt;div class=&quot;drag-line-s1&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;drag-line-s2&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;drag-line-s3&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;td-right&quot;&gt;
+                右边
+            &lt;/div&gt;
+        &lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
     var obj = dragFrame.init({
         type: 1,
-        mainFrame: '#td-frame',
-        frame1: '.td-left',
-        frame2: '.td-right',
-        frameL: '.td-line',
+        mainFrame: &#39;#td-frame&#39;,
+        frame1: &#39;.td-left&#39;,
+        frame2: &#39;.td-right&#39;,
+        frameL: &#39;.td-line&#39;,
         callback: function(event) {
             dragFrame.resetSize();
         }
     });
-</script>
+&lt;/script&gt;
 			</pre>
                     </div>
                 </div>
@@ -82,45 +82,45 @@
                     <div class="code-title"> <a name="dragframe.hhcode">混合框架</a><span class="code-note">上下左右拖动框架示例代码</span></div>
                     <div class="code-descr">
                         <pre class="brush:html">
-        <div class="td-frame" id="td-frame">
-            <div class="td-left">
-                <div class="acecls">
-                    <div class="td-frame" id="td-ud-frame3">
-                        <div class="td-up">
+        &lt;div class=&quot;td-frame&quot; id=&quot;td-frame&quot;&gt;
+            &lt;div class=&quot;td-left&quot;&gt;
+                &lt;div class=&quot;acecls&quot;&gt;
+                    &lt;div class=&quot;td-frame&quot; id=&quot;td-ud-frame3&quot;&gt;
+                        &lt;div class=&quot;td-up&quot;&gt;
                             框架上边内容
-                        </div>
-                        <div class="td-line">
-                            <div class="drag-line-s1"></div>
-                            <div class="drag-line-s2"></div>
-                            <div class="drag-line-s3"></div>
-                        </div>
-                        <div class="td-down">
+                        &lt;/div&gt;
+                        &lt;div class=&quot;td-line&quot;&gt;
+                            &lt;div class=&quot;drag-line-s1&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;drag-line-s2&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;drag-line-s3&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;td-down&quot;&gt;
                             框架下边内容
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="td-line">
-                <div class="drag-line-s1"></div>
-                <div class="drag-line-s2"></div>
-                <div class="drag-line-s3"></div>
-            </div>
-            <div class="td-right">
-                <div class="td-frame" id="td-ud-frame">
-                    <div class="td-up">
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;td-line&quot;&gt;
+                &lt;div class=&quot;drag-line-s1&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;drag-line-s2&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;drag-line-s3&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;td-right&quot;&gt;
+                &lt;div class=&quot;td-frame&quot; id=&quot;td-ud-frame&quot;&gt;
+                    &lt;div class=&quot;td-up&quot;&gt;
                         框架上边内容
-                    </div>
-                    <div class="td-line">
-                        <div class="drag-line-s1"></div>
-                        <div class="drag-line-s2"></div>
-                        <div class="drag-line-s3"></div>
-                    </div>
-                    <div class="td-down">
+                    &lt;/div&gt;
+                    &lt;div class=&quot;td-line&quot;&gt;
+                        &lt;div class=&quot;drag-line-s1&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;drag-line-s2&quot;&gt;&lt;/div&gt;
+                        &lt;div class=&quot;drag-line-s3&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;td-down&quot;&gt;
                         框架下边内容
-                    </div>
-                </div>
-            </div>
-        </div>
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
 			</pre>
                     </div>
                 </div>
