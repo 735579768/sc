@@ -4,8 +4,9 @@ $(function() {
 			var leftobj = $('#left-nav');
 			var pblock = $('.param-block');
 			var addData = function(paramblock) {
+				var dtitle = paramblock.find('h2 a');
 				var str = '<dl>';
-				str += '<dt onclick="sc.showMenu(this);"><i class="fa fa-envira"></i>' + paramblock.find('h2').text() + '</dt>';
+				str += '<dt onclick="sc.showMenu(this);"><i class="fa fa-envira"></i><a href="#' + dtitle.prop('name') + '">' + dtitle.text() + '</a></dt>';
 				paramblock.find('.code-block .code-title a').each(function(index, el) {
 					var nam = $(this).prop('name');
 					var tex = $(this).text();
@@ -17,6 +18,7 @@ $(function() {
 			pblock.each(function(index, el) {
 				addData($(this));
 			});
+			$('#left-nav dt').not(':first').click();
 		},
 		//显示页面
 		showMenu: function(obj) {
