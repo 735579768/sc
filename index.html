@@ -134,63 +134,81 @@
                     <div class="code-title"> <a name="type">type</a><span class="code-note">拖动类型/方向</span></div>
                     <div class="code-param">类型：int 默认为 1</div>
                     <div class="code-descr">
-                        框架类型1左右 2上下
+                        框架布局类型1左右 2上下
                     </div>
                 </div>
                 <div class="code-block">
                     <div class="code-title"> <a name="mainFrame">mainFrame</a><span class="code-note">主框架的容器选择器</span></div>
                     <div class="code-param">类型：jquery选择器 默认为：#td-frame</div>
                     <div class="code-descr">
+                        拖动框架的父容器
                     </div>
                 </div>
                 <div class="code-block">
                     <div class="code-title"> <a name="bili">bili</a><span class="code-note">框架比例</span></div>
                     <div class="code-param">类型：Array 默认为：[1,1]</div>
                     <div class="code-descr">
+                        框架的宽度或高度比例
                     </div>
                 </div>
                 <div class="code-block">
                     <div class="code-title"> <a name="minSize">minSize</a><span class="code-note">框架最小宽/高度</span></div>
                     <div class="code-param">类型：int 默认为：50</div>
                     <div class="code-descr">
+                    框架可以拖动到的最小宽度和高度
                     </div>
                 </div>
                 <div class="code-block">
                     <div class="code-title"> <a name="frameL">frameL</a><span class="code-note">拖动线</span></div>
                     <div class="code-param">类型：jquery选择器 默认为：.td-line</div>
                     <div class="code-descr">
+                        框架中的拖动线,直接写拖动线类选择器
                     </div>
                 </div>
                 <div class="code-block">
                     <div class="code-title"> <a name="frame1">frame1</a><span class="code-note">第一个框架</span></div>
                     <div class="code-param">类型：jquery选择器 默认为：.td-left</div>
                     <div class="code-descr">
+                    框架容器中的第一个框架元素的类选择器
                     </div>
                 </div>
                 <div class="code-block">
                     <div class="code-title"> <a name="frame1Size">frame1Size</a><span class="code-note">第一个框架默认大小</span></div>
                     <div class="code-param">类型：int 默认为：0</div>
                     <div class="code-descr">
+                    框架容器中的第一个框架元素的默认宽度或高度
                     </div>
                 </div>
                 <div class="code-block">
                     <div class="code-title"> <a name="frame2">frame2</a><span class="code-note">第二个框架</span></div>
                     <div class="code-param">类型：jquery选择器 默认为：.td-right</div>
                     <div class="code-descr">
+                    框架容器中的第二个框架元素的类选择器
                     </div>
                 </div>
                 <div class="code-block">
                     <div class="code-title"> <a name="frame2Size">frame2Size</a><span class="code-note">第二个框架默认大小</span></div>
                     <div class="code-param">类型：int 默认为：0</div>
                     <div class="code-descr">
+                    框架容器中的第二个框架元素的默认宽度或高度
                     </div>
                 </div>
                 <div class="code-block">
                     <div class="code-title"> <a name="callback">callback</a><span class="code-note">拖动回调</span></div>
                     <div class="code-param">类型：function 默认为：null</div>
                     <div class="code-descr">
+                        拖动过程中的回调函数,有一个参数为event(当前鼠标事件)
                     </div>
                 </div>
+                <div class="code-block">
+                    <div class="code-title"> <a name="dragFrame.resetSize">dragFrame.resetSize</a><span class="code-note">重置框架大小</span></div>
+                    <div class="code-param">类型：function </div>
+                    <div class="code-descr">
+                       当多个框架嵌套的时候需要在回调函数中执行dragFrame.resetSize();同步其它框架大小
+                    </div>
+                </div>
+
+
             </div>
             <!--drag frame end-->
 
